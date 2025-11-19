@@ -54,4 +54,8 @@ EnrollmentRoutes(app, db)
 
 let server = app.listen(process.env.PORT || 4000, () => {
   console.log('Running HTTP in port:' + process.env.PORT);
+  console.log(`Using the following env data \n
+    - process.env.CLIENT_URL: ${process.env.CLIENT_URL} \n
+    - process.env.SERVER_URL: ${process.env.SERVER_URL} \n
+    - process.env.SESSION_SECRET: ${process.env.SESSION_SECRET}\n`)
 })
